@@ -429,7 +429,7 @@ public struct AlertToastModifier: ViewModifier{
 #if os(iOS)
         return UIScreen.main.bounds
 #elseif os(visionOS)
-        return .zero
+        return CGRect(x: 0, y: 0, width: 200, height: 200)
 #else
         return NSScreen.main?.frame ?? .zero
 #endif
